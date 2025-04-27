@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Notas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--SweetAlert2-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Aplicación de Notas</h1>
+
+<!--Formulario de Notas-->
+        <div class="mb-3">
+            <input type="text" id="noteTitle" class="form-control mb-2" placeholder="Titulo de la Nota">
+            <textarea id="noteContent" class="form-control mb-2" placeholder="Descripción de la Nota"></textarea>
+            <select class="form-select mb-2" id="noteCategory">
+                <option selected disabled value="">Seleccione una categoría</option>
+                <option value="Trabajo">Trabajo</option>
+                <option value="Personal">Personal</option>
+                <option value="Estudio">Estudio</option>
+            </select>
+            <button class="btn btn-primary w-100 mb-3" type="button" id="addNote">Agregar Nota</button>
+
+        </div>
+
+<!--Tabla de Notas-->
+        <table class="table table-bordered">
+            <thead class = "table-light">
+                <tr>
+                    <th>Título</th>
+                    <th>Descripción</th>
+                    <th>Categoría</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+            <tbody id="notesTableBody">
+            </tbody>
+        </table>
+
+    <div class="d-flex justify-content-between align-items-center mt-3">
+        <button class="btn btn-outline-primary" id="prevPage">Anterior</button>
+        <span id="pageIndicator" class="mx-3">Página 1</span>
+        <button class="btn btn-outline-primary" id="nextPage">Siguiente</button>
+        </div>
+        <div class="mb-3 text-center">
+        <button class="btn btn-danger" type="button" id="deleteAllNotes">Eliminar todas las Notas</button>
+    </div>
+</div>
+
+<script src="./js/script.js"></script>
+    
+</body>
+</html>
